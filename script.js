@@ -127,15 +127,16 @@ let body=document.body;
 //         list.appendChild(li)
 //     });
 
-const items= ['apples', 'bananas','grapefruit','oranges', 'kiwis']
-const div=document.getElementById('items')
+// Shopping list stage 1
+// const items= ['apples', 'bananas','grapefruit','oranges', 'kiwis']
+// const div=document.getElementById('items')
 
-items.forEach(fruit => {
-    const newDiv=document.createElement('div')
-    div.appendChild(newDiv)
-    div.classList.add('fruit')
-    div.innerHTML+=fruit
-})
+// items.forEach(fruit => {
+//     const newDiv=document.createElement('div')
+//     div.appendChild(newDiv)
+//     div.classList.add('fruit')
+//     div.innerHTML+=fruit
+// })
 
 
     
