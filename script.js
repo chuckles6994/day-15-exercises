@@ -109,6 +109,26 @@ let body=document.body;
 // }
 // })
 
+const departures = [494, 499, 500, 517, 520, 523, 530, 556, 563, 576, 586, 613, 625];
+
+const heading= document.createElement('h1')
+heading.innerHTML="Departure Times"
+body.appendChild(heading)
+const list=document.createElement('ul')
+body.appendChild(list)
+
+    departures.forEach(element => {
+        let hours =Math.floor(element/60);
+        let min = element -(hours*60);
+        const li = document.createElement('li');
+        li.innerHTML= `<li> ${hours} : ${min}</li>`;
+        list.appendChild(li)
+    });
+
+
+    
+
+
 
 
 
