@@ -50,49 +50,65 @@ let body=document.body;
 // body.appendChild(div);
 
 // // Discover Style and classlist
-const alerts = [
-    'Unable to access resource. User is not authorized.',
-    'You are missing proper user permissions.',
-    'Administrators have been notified of this action.',
-    'Please remain where you are, police is on the way.'
-];
+// const alerts = [
+//     'Unable to access resource. User is not authorized.',
+//     'You are missing proper user permissions.',
+//     'Administrators have been notified of this action.',
+//     'Please remain where you are, police is on the way.'
+// ];
 
-const newDiv= document.createElement('div')
-newDiv.className="alerts"
-body.appendChild(newDiv)
+// const newDiv= document.createElement('div')
+// newDiv.className="alerts"
+// body.appendChild(newDiv)
 
-const elementFromHTML= (html) => {
-    const div =document.createElement('div');
-    div.innerHTML=html;
-    return div;
-}
-for(i=0; i<alerts.length; i++){
-    const alert=alerts[i];
-    const alertElement=elementFromHTML(`<div>`);
-    const alertText=elementFromHTML(`<div>`);
-    const alertClose=elementFromHTML(`<div>`);
-    alertElement.classList.add('alert');
-    alertText.classList.add(`alert__text`);
-    alertClose.classList.add(`alert__close`);
-    alertText.innerHTML=alert;
-    alertClose.innerHTML="&times;"
-    newDiv.appendChild(alertElement);
-    alertElement.appendChild(alertText);
-    alertElement.appendChild(alertClose);
-    // newDiv.addEventListener('click', () =>{
-    //     // alertText.style.backgroundColor="green"
-    //     // alertElement.style.color="white"
-    //     alert.classList.add('alert--error')
-    //     })
-    // alertClose.addEventListener('click', () =>{
-    //     alertClose.style.display="none"
-    //      })
+// const elementFromHTML= (html) => {
+//     const div =document.createElement('div');
+//     div.innerHTML=html;
+//     return div;
+// }
+// for(i=0; i<alerts.length; i++){
+//     const alert=alerts[i];
+//     const alertElement=elementFromHTML(`<div>`);
+//     const alertText=elementFromHTML(`<div>`);
+//     const alertClose=elementFromHTML(`<div>`);
+//     alertElement.classList.add('alert');
+//     alertText.classList.add(`alert__text`);
+//     alertClose.classList.add(`alert__close`);
+//     alertText.innerHTML=alert;
+//     alertClose.innerHTML="&times;"
+//     newDiv.appendChild(alertElement);
+//     alertElement.appendChild(alertText);
+//     alertElement.appendChild(alertClose);
+//     // newDiv.addEventListener('click', () =>{
+//     //     // alertText.style.backgroundColor="green"
+//     //     // alertElement.style.color="white"
+//     //     alert.classList.add('alert--error')
+//     //     })
+//     // alertClose.addEventListener('click', () =>{
+//     //     alertClose.style.display="none"
+//     //      })
  
-    alertElement.addEventListener('click', ()=>{
-        alertElement.classList.add('alert--error');
-        alertElement.classList.toggle('alert--seen');
-    })
-};
+//     alertElement.addEventListener('click', ()=>{
+//         alertElement.classList.add('alert--error');
+//         alertElement.classList.toggle('alert--seen');
+//     })
+// };
+
+// Discover Attributes
+
+// const alerts=document.querySelectorAll('.alert')
+
+// alerts.forEach(alert=>{
+//     const type=alert.getAttribute('data-type');
+//     if (type==='error'){
+//         alert.classList.add('alert--error');
+//     }else if (type==='success'){
+//         alert.classList.add('alert--success');
+//     }else if (type==='warning'){
+//         alert.classList.add('alert--warning');
+// }
+// })
+
 
 
 

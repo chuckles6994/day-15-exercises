@@ -1,7 +1,22 @@
-.alert.alert--seen{
+/* Style and class list: */
+/* .alert.alert--seen{
     opacity:0.5%;
 }
 .alert.alert--error{
     background-color: red;
     color:white;
+} */
+
+/* Discover Attributes */
+.alert.alert--error {
+    background-color: red;
+    color: white;
+}
+.alert.alert--warning {
+    background-color: orange;
+    color: white;
+}
+.alert.alert--success {
+    background-color: green;
+    color: white;
 }
