@@ -109,21 +109,33 @@ let body=document.body;
 // }
 // })
 
-const departures = [494, 499, 500, 517, 520, 523, 530, 556, 563, 576, 586, 613, 625];
+// Departures Stage 1
 
-const heading= document.createElement('h1')
-heading.innerHTML="Departure Times"
-body.appendChild(heading)
-const list=document.createElement('ul')
-body.appendChild(list)
+// const departures = [494, 499, 500, 517, 520, 523, 530, 556, 563, 576, 586, 613, 625];
 
-    departures.forEach(element => {
-        let hours =Math.floor(element/60);
-        let min = element -(hours*60);
-        const li = document.createElement('li');
-        li.innerHTML= `<li> ${hours} : ${min}</li>`;
-        list.appendChild(li)
-    });
+// const heading= document.createElement('h1')
+// heading.innerHTML="Departure Times"
+// body.appendChild(heading)
+// const list=document.createElement('ul')
+// body.appendChild(list)
+
+//     departures.forEach(element => {
+//         let hours =Math.floor(element/60);
+//         let min = element -(hours*60);
+//         const li = document.createElement('li');
+//         li.innerHTML= `<li> ${hours} : ${min}</li>`;
+//         list.appendChild(li)
+//     });
+
+const items= ['apples', 'bananas','grapefruit','oranges', 'kiwis']
+const div=document.getElementById('items')
+
+items.forEach(fruit => {
+    const newDiv=document.createElement('div')
+    div.appendChild(newDiv)
+    div.classList.add('fruit')
+    div.innerHTML+=fruit
+})
 
 
     
