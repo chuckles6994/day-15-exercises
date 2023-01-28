@@ -140,118 +140,150 @@ let body=document.body;
 
 // Departures Stage 2
 
-const departures = [
-    {time: {hrs: 8, min: 14},
-    train: 'Acela Express',
-    No:2153,
-    Destination:'Washington, D.C.',
-    Status:'',
-    Track:'2'
-    },
-    {time: {hrs: 8, min: 19},
-    train: 'New Haven Line',
-    No:1541,
-    Destination:'Grand Central Terminal',
-    Status:'On Time',
-    Track:'14'
-    },
-    {time: {hrs: 8, min: 20},
-    train: 'Shoreline East',
-    No:1606,
-    Destination:'Old Saybrook',
-    Status:'On Time',
-    Track:'12'
-    },
-    {time: {hrs: 8, min: 37},
-    train: 'NE Regional',
-    No:190,
-    Destination:'Boston South Station',
-    Status:'On Time',
-    Track:'1'
-    },
-    {time: {hrs: 8, min: 40},
-    train: 'Shuttle',
-    No:490,
-    Destination:'Springfield',
-    Status:'On Time',
-    Track:'3'
-    }, 
-    {time: {hrs: 8, min: 43},
-    train: 'NE Regional',
-    No:95,
-    Destination:'Newport News',
-    Status:'On Time',
-    Track:'3'
-    },
-    {time: {hrs: 8, min: 50},
-    train: 'New Haven Line',
-    No:1545,
-    Destination:'Grand Central Terminal',
-    Status:'On Time',
-    Track:'8'
-    }, 
-    {time: {hrs: 9, min: 16},
-    train: 'Shoreline East',
-    No:1610,
-    Destination:'Old Saybrook',
-    Status:'On Time',
-    Track:'10'
-    }, 
-    {time: {hrs: 9, min: 23},
-    train: 'New Haven Line',
-    No:1549,
-    Destination:'Grand Central Terminal',
-    Status:'On Time',
-    Track:'14'
-    }, 
-    {time: {hrs: 9, min: 36},
-    train: 'Acela Express',
-    No:2150,
-    Destination:'Boston South Station',
-    Status:'On Time',
-    Track:'1'
-    }, 
-    {time: {hrs: 9, min: 46},
-    train: 'New Haven Line',
-    No:1551,
-    Destination:'Grand Central Station',
-    Status:'On Time',
-    Track:'8'
-    }, 
-    {time: {hrs: 10, min: 13},
-    train: 'NE Regional',
-    No:170,
-    Destination:'Boston South Station',
-    Status:'On Time',
-    Track:'2'
-    }, 
-    {time: {hrs: 10, min: 25},
-    train: 'New Haven Line',
-    No:1553,
-    Destination:'Grand Central Terminal',
-    Status:'On Time',
-    Track:'14'
-    }
-];
+// const departures = [
+//     {time: {hrs: 8, min: 14},
+//     train: 'Acela Express',
+//     No:2153,
+//     Destination:'Washington, D.C.',
+//     Status:'',
+//     Track:'2'
+//     },
+//     {time: {hrs: 8, min: 19},
+//     train: 'New Haven Line',
+//     No:1541,
+//     Destination:'Grand Central Terminal',
+//     Status:'On Time',
+//     Track:'14'
+//     },
+//     {time: {hrs: 8, min: 20},
+//     train: 'Shoreline East',
+//     No:1606,
+//     Destination:'Old Saybrook',
+//     Status:'On Time',
+//     Track:'12'
+//     },
+//     {time: {hrs: 8, min: 37},
+//     train: 'NE Regional',
+//     No:190,
+//     Destination:'Boston South Station',
+//     Status:'On Time',
+//     Track:'1'
+//     },
+//     {time: {hrs: 8, min: 40},
+//     train: 'Shuttle',
+//     No:490,
+//     Destination:'Springfield',
+//     Status:'On Time',
+//     Track:'3'
+//     }, 
+//     {time: {hrs: 8, min: 43},
+//     train: 'NE Regional',
+//     No:95,
+//     Destination:'Newport News',
+//     Status:'On Time',
+//     Track:'3'
+//     },
+//     {time: {hrs: 8, min: 50},
+//     train: 'New Haven Line',
+//     No:1545,
+//     Destination:'Grand Central Terminal',
+//     Status:'On Time',
+//     Track:'8'
+//     }, 
+//     {time: {hrs: 9, min: 16},
+//     train: 'Shoreline East',
+//     No:1610,
+//     Destination:'Old Saybrook',
+//     Status:'On Time',
+//     Track:'10'
+//     }, 
+//     {time: {hrs: 9, min: 23},
+//     train: 'New Haven Line',
+//     No:1549,
+//     Destination:'Grand Central Terminal',
+//     Status:'On Time',
+//     Track:'14'
+//     }, 
+//     {time: {hrs: 9, min: 36},
+//     train: 'Acela Express',
+//     No:2150,
+//     Destination:'Boston South Station',
+//     Status:'On Time',
+//     Track:'1'
+//     }, 
+//     {time: {hrs: 9, min: 46},
+//     train: 'New Haven Line',
+//     No:1551,
+//     Destination:'Grand Central Station',
+//     Status:'On Time',
+//     Track:'8'
+//     }, 
+//     {time: {hrs: 10, min: 13},
+//     train: 'NE Regional',
+//     No:170,
+//     Destination:'Boston South Station',
+//     Status:'On Time',
+//     Track:'2'
+//     }, 
+//     {time: {hrs: 10, min: 25},
+//     train: 'New Haven Line',
+//     No:1553,
+//     Destination:'Grand Central Terminal',
+//     Status:'On Time',
+//     Track:'14'
+//     }
+// ];
 
-const heading= document.querySelector('th')
-heading.textContent="Departure Times"
-heading.classList.add('head')
-const table=document.querySelector("table")
+// const heading= document.querySelector('th')
+// heading.textContent="Departure Times"
+// heading.classList.add('head')
+// const table=document.querySelector("table")
 
-    departures.forEach(element => {
-        // let hours =Math.floor(element/60);
-        // let min = element -(hours*60);
-        table.innerHTML +=
-        `<tr><td>${element.time.hrs}:${element.time.min}</td></tr>
-        <tr><td>${element.train}</td></tr>
-        <tr><td>${element.No}</td></tr>
-        <tr><td>${element.Destination}</td></tr>
-        <tr><td>${element.Status}</td></tr>
-        <tr><td>${element.Track}</td></tr>
-        <hr>`
-        table.classList.add('board__time')
-    });
+//     departures.forEach(element => {
+//         // let hours =Math.floor(element/60);
+//         // let min = element -(hours*60);
+//         table.innerHTML +=
+//         `<tr><td>${element.time.hrs}:${element.time.min}</td></tr>
+//         <tr><td>${element.train}</td></tr>
+//         <tr><td>${element.No}</td></tr>
+//         <tr><td>${element.Destination}</td></tr>
+//         <tr><td>${element.Status}</td></tr>
+//         <tr><td>${element.Track}</td></tr>
+//         <hr>`
+//         table.classList.add('board__time')
+//     });
+
+/* Shopping List Stage 2 */
+const items= [
+    { Food:'apples',
+    Quantity: 2,
+    Price: '$3'},
+    {Food:'bananas',
+     Quantity: 3,
+    Price: '$5'},
+    {Food:'peanuts',
+    Quantity: 20,
+     Price: '$6'},
+     {Food:'oranges',
+     Quantity: 5,
+      Price: '$10'},    
+    {Food:'kiwis',
+      Quantity: 1,
+       Price: '$10,000'}
+    ]
+const div=document.getElementById('items')
+
+items.forEach(fruit => {
+    const newDiv=document.createElement('div')
+    div.appendChild(newDiv)
+    div.classList.add('fruit')
+    div.innerHTML+=`Food:
+    ${fruit.Food} <br>
+    How much/many: ${fruit.Quantity} <br>
+    Cost:${fruit.Price}
+    <hr>`
+})
+
  
 
 
