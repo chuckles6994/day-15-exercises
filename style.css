@@ -8,7 +8,7 @@
 } */
 
 /* Discover Attributes */
-.alert.alert--error {
+/* .alert.alert--error {
     background-color: red;
     color: white;
 }
@@ -19,4 +19,11 @@
 .alert.alert--success {
     background-color: green;
     color: white;
+} */
+
+.board__time{
+    background-color:bisque;
+}
+.head {
+    background-color: brown;
 }
