@@ -254,6 +254,37 @@ let body=document.body;
 //     });
 
 /* Shopping List Stage 2 */
+// const items= [
+//     { Food:'apples',
+//     Quantity: 2,
+//     Price: '$3'},
+//     {Food:'bananas',
+//      Quantity: 3,
+//     Price: '$5'},
+//     {Food:'peanuts',
+//     Quantity: 20,
+//      Price: '$6'},
+//      {Food:'oranges',
+//      Quantity: 5,
+//       Price: '$10'},    
+//     {Food:'kiwis',
+//       Quantity: 1,
+//        Price: '$10,000'}
+//     ]
+// const div=document.getElementById('items')
+
+// items.forEach(fruit => {
+//     const newDiv=document.createElement('div')
+//     div.appendChild(newDiv)
+//     div.classList.add('fruit')
+//     div.innerHTML+=`Food:
+//     ${fruit.Food} <br>
+//     How much/many: ${fruit.Quantity} <br>
+//     Cost:${fruit.Price}
+//     <hr>`
+// })
+
+/* Shopping List Stage 3 */
 const items= [
     { Food:'apples',
     Quantity: 2,
@@ -273,9 +304,10 @@ const items= [
     ]
 const div=document.getElementById('items')
 
+const btn=document.querySelector('button')
+
+
 items.forEach(fruit => {
-    const newDiv=document.createElement('div')
-    div.appendChild(newDiv)
     div.classList.add('fruit')
     div.innerHTML+=`Food:
     ${fruit.Food} <br>
@@ -283,6 +315,28 @@ items.forEach(fruit => {
     Cost:${fruit.Price}
     <hr>`
 })
+
+const addItems =()=>{
+    const newItem=document.querySelector('#food').value;
+    const newAmount=document.querySelector('#quantity').value;
+    const newPrice=document.querySelector('#price').value;
+    div.classList.add('fruit')
+    div.innerHTML+=`Food:
+    ${newItem} <br>
+    How much/many: ${newAmount} <br>
+    Cost:${newPrice}
+    <hr>`
+    items.push({
+        Food:newItem, 
+        Quantity:newAmount,
+        Price:newPrice
+    });
+}
+
+btn.classList.add('size')
+
+
+
 
  
 
